@@ -25,6 +25,7 @@ export const carReducer = (state = initialState, action) => {
             return {
                 ...state,
                 car: {
+                    image: 'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
                     price: state.car.price + action.payload.price,
                     features: [
                         ...state.car.features,
