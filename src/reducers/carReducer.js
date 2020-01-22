@@ -15,15 +15,22 @@ const initialState = {
     ]
 }
 
-const ADD_FEATURE = 'ADD_FEATURE';
-
 export const carReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_FEATURE:
-            console.log(`hello from adding`);
+        case 'ADD_FEATURE':
+            console.log(`adding connect worked`);
+            // let selectedFeature = state.additionalFeatures.filter((feature) => feature.id === action.payload);
+            // console.log(selectedFeature);
+            console.log(action.payload);
             return {
-
-            }
+                ...state,
+                car: {
+                    features: [
+                        ...state.car.features,
+                        action.payload
+                    ]
+                }
+            };
         default:
             return state;
     }

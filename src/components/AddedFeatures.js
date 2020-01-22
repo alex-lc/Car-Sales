@@ -7,6 +7,7 @@ const AddedFeatures = props => {
   return (
     <div className="content">
       <h6>Added features:</h6>
+      {console.log(props.features)}
       {props.features.length ? (
         <ol type="1">
           {props.features.map(item => (
